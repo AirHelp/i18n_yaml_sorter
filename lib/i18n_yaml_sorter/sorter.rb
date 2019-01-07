@@ -21,9 +21,6 @@ module I18nYamlSorter
         @read_line_again = nil
         maybe_next_line.chomp!
 
-        #Is it blank? Discard!
-        next if maybe_next_line.match(/^\s*$/)
-
         #Does it look like a key: value line?
         key_value_parse = maybe_next_line.match(/^(\s*)(["']?[\w\-]+["']?)(: )(\s*)(\S.*\S)(\s*)$/)
         if  key_value_parse 
